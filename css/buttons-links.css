@@ -1,0 +1,45 @@
+.link {
+    color: #005999;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.button {
+    height: 48px;
+    min-width: 120px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color:#c7c7c7;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    border-radius: 0;
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+
+}
+
+.button:not(.button-active):hover {
+    color: #005999;
+}
+
+.button-active {
+    background: rgb(15,84,157);
+    color:#ffffff;
+    border-radius: 40px;
+    box-shadow: 0 6px 24px rgba(19,120,191,0.5);
+}
+
+.button:focus {
+    outline: none;
+}

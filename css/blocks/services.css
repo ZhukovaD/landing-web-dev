@@ -1,0 +1,142 @@
+.services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.services__item{
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    max-width: 290px;
+    padding: 40px;
+    background: none;
+    border-radius: 5px;
+}
+
+.services__icon{
+    height: 100px;
+    width: 80px;
+    background: 0 50% no-repeat ;
+    background-size: 80px;
+}
+
+.services__icon--dev{
+    background-image: url("img/dev.png");
+}
+
+.services__icon--design{
+    background-image: url("img/design.png");
+    background-size: 50px;
+}
+
+.services__icon--marketing{
+    background-image: url("img/marketing.png");
+}
+
+.services__title{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+    color:#ffffff;
+}
+
+.services__description{
+    color:#ffffff;
+    padding-bottom: 20px;
+}
+
+.services__list{
+    display: none;
+    flex:1 1 0;
+}
+
+.services__link{
+    flex:0 1 0;
+    display: none;
+}
+
+/*-------ПОВЕДЕНИЕ БЛОКА ПРИ НАВЕДЕНИИ------*/
+.services__item:hover{
+    background: #ffffff;
+    box-shadow: 0 15px 24px rgba(23,3,79,0.1);
+    z-index: 1000;
+}
+
+.services__item:hover .services__link,
+.services__item:hover .services__list{
+    display: block;
+}
+
+.services__item:hover .services__title,
+.services__item:hover .services__description{
+    color:#000000;
+}
+
+.services__item:hover .services__icon--dev{
+    background-image: url("img/dev-hover.png");
+}
+
+.services__item:hover .services__icon--design{
+    background-image: url("img/design-hover.png");
+}
+
+.services__item:hover .services__icon--marketing{
+    background-image: url("img/marketing-hover.png");
+}
+
+@media (max-width: 955px) {
+    .services__item{
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 900px) {
+    .services{
+        flex-direction: column;
+    }
+
+    .services__item{
+        flex-direction: column;
+        min-height: 150px;
+        max-width: none;
+        padding: 30px;
+        background: none;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__item{
+        padding:10px 0 10px 0;
+    }
+
+    /*-------ПОВЕДЕНИЕ БЛОКА ПРИ НАВЕДЕНИИ------*/
+    .services__item:hover{
+        background: none;
+        box-shadow: none;
+        z-index: 0;
+    }
+
+    .services__item:hover .services__link,
+    .services__item:hover .services__list{
+        display: none;
+    }
+
+    .services__item:hover .services__title,
+    .services__item:hover .services__description{
+        color:#ffffff;
+    }
+
+    .services__item:hover .services__icon--dev{
+        background-image: url("img/dev.png");
+    }
+
+    .services__item:hover .services__icon--design{
+        background-image: url("img/design.png");
+    }
+
+    .services__item:hover .services__icon--marketing{
+        background-image: url("img/marketing.png");
+    }
+}
